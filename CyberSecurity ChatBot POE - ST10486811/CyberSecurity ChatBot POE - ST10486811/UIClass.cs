@@ -11,6 +11,7 @@ namespace CyberSecurity_ChatBot_POE___ST10486811
     {
         public static void displayLogo()
         {
+            // ASCII Logo
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
             Console.WriteLine("@  ____                       _ _         @");
@@ -20,10 +21,11 @@ namespace CyberSecurity_ChatBot_POE___ST10486811
             Console.WriteLine("@ |____/ |___| |__|___,_|_|  |_||__||__, |@");
             Console.WriteLine("@                                   |___/ @");
             Console.WriteLine("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-            Console.WriteLine("Welcome!");
+            Console.WriteLine("\n" + new string('=', 43) + "\n");
             Console.ResetColor();
         }
 
+        // Method to create a typing effect(10ms delay on typing for a more normal conversational speed)
         public static void typeMessage(string message, ConsoleColor color = ConsoleColor.DarkBlue)
         {
             Console.ForegroundColor = color;

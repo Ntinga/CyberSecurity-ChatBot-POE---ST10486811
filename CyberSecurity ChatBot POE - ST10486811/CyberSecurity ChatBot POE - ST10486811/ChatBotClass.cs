@@ -11,6 +11,8 @@ namespace CyberSecurity_ChatBot_POE___ST10486811
     {
         public string UserName { get; set; }
 
+        // Voice message audio
+        // PlaySync() plays audio till finish
         public void playVoiceMessage()
         {
             try
@@ -32,6 +34,7 @@ namespace CyberSecurity_ChatBot_POE___ST10486811
             Console.Write("You: ");
             UserName = Console.ReadLine();
 
+            // Input validation
             if (string.IsNullOrEmpty(UserName))
             {
                 UserName = "User";
@@ -64,6 +67,7 @@ namespace CyberSecurity_ChatBot_POE___ST10486811
             }
         }
 
+        // Response code
         private void ProcessInput(string input)
         {
             if (input.Contains("purpose"))
@@ -88,6 +92,7 @@ namespace CyberSecurity_ChatBot_POE___ST10486811
             }
             else
             {
+                // In case the prompt is too difficult or is not accounted for, default response below
                 UIClass.typeMessage("Assistant: I'm not sure how to answer that yet. Ask me about 'passwords', 'phishing', or my 'purpose'.", ConsoleColor.Yellow);
             }
         }

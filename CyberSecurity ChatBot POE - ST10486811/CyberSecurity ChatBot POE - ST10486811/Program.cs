@@ -10,6 +10,18 @@ namespace CyberSecurity_ChatBot_POE___ST10486811
     {
         static void Main(string[] args)
         {
+            Console.Title = "CyberSecurity Awareness ChatBot";
+
+            ChatBotClass bot = new ChatBotClass();
+
+            bot.playVoiceMessage();
+
+            UIClass.displayLogo();
+
+            bot.Start();
+
+            Console.WriteLine("\nPress any key to close...");
+            Console.ReadKey();
         }
     }
 }
